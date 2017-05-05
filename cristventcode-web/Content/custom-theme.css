@@ -58,6 +58,14 @@
     border: 4px solid white;
 }
 
+.personal-image-small{
+    height: 100px;
+}
+
+.section-hero-small{
+    height: 280px;
+}
+
 .navbar-toggle {
     background-color: white;
 }
