@@ -82,6 +82,8 @@
 
 .body-content {
     background-color: #f2f2f8;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .card {
@@ -115,8 +117,6 @@
     padding-top: 0px;
 }
 
-
-
 @media(min-width: 768px) {
     .hero-text h1 {
         font-size: 4rem;
@@ -126,7 +126,28 @@
         background-color: transparent;
     }
 
+    .navbar{
+        border-radius: 0px;
+    }
+
     .card-holder{
         padding-right: 0px;
     }
+
+    .body-content, .navbar, .navbar-custom{
+        width: 100%;
+    }
+
+}
+
+@media(min-width: 1440px){
+    .body-content, .navbar, .navbar-custom {
+        width: 1440px;
+        margin: 0px auto;
+    }
+
+    .navbar-custom{
+        padding: 0px 45px;
+    }
+
 }

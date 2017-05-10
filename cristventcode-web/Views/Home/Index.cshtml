@@ -1,4 +1,7 @@
-﻿<div class="section-hero">
+﻿
+@model cristventcode_web.Models.Bio
+
+<div class="section-hero">
     <div class="hero">
         <div class="container">
             <img class="personal-image" src="~/Content/images/personal-image.jpg" alt="personal face image" />
@@ -9,6 +12,8 @@
         </div>
     </div>
 </div>
+
+<p class="well"> @Model.Email</p>
 
 <div class="col-xs-12 large-holder">
     <div class="col-md-9 card-holder">
@@ -21,6 +26,7 @@
                 <button class="btn btn-default btn-info btn-sm"> Resume </button>
             </div>
         </div>
+
         <div class="col-xs-12 col-md-4 card">
             <div class="card-details">
                 <h3> Projects </h3>
@@ -69,4 +75,3 @@
         </div>
     </div>
 </div>
-
