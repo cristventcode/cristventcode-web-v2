@@ -7,24 +7,90 @@ namespace cristventcode_web.Models
 {
     public class ContentRepo
     {
+
+        // Methods for managing the profile
         public static List<Profile> _myProfile = new List<Profile>();
 
         public Profile getProfile()
         {
-            using(var db = new ContentDbContext())
+            using (var db = new ContentDbContext())
             {
-                return db.ProfileTable.Find(1);              
+                return db.ProfileTable.Find(1);
             }
         }
 
-        public void CreateBio(Profile newProfile)
+        public void createProfile(Profile newProfile)
         {
-            using(var db = new ContentDbContext())
+            using (var db = new ContentDbContext())
             {
                 db.ProfileTable.Add(newProfile);
                 db.SaveChanges();
             }
         }
+        // End of Profile 
+
+
+        // Methods for managing Writings
+        public void createWriting(Writing newWriting)
+        {
+            using (var db = new ContentDbContext())
+            {
+                db.WritingsTable.Add(newWriting);
+                db.SaveChanges();
+            }
+        }
+
+        public List<Writing> getWritingAll()
+        {
+            using (var db = new ContentDbContext())
+            {
+                var writingList = from item in db.WritingsTable
+                                  select item;
+
+                return writingList.ToList();
+            }
+        }
+
+        public Writing getWritingById(int id)
+        {
+            using (var db = new ContentDbContext())
+            {
+                return db.WritingsTable.Find(id);
+            }
+        }
+        // End of Writings
+
+
+        // Methods for managing Projects
+        public void createProject(Project newProject)
+        {
+            using (var db = new ContentDbContext())
+            {
+                db.ProjectsTable.Add(newProject);
+                db.SaveChanges();
+            }
+        }
+
+        public List<Project> getProjectAll()
+        {
+            using (var db = new ContentDbContext())
+            {
+                var projectList = from item in db.ProjectsTable
+                                  select item;
+
+                return projectList.ToList();
+            }
+        }
+
+        public Project getProjectById(int id)
+        {
+            using (var db = new ContentDbContext())
+            {
+                return db.ProjectsTable.Find(id);
+            }
+        }
+        // End of Projects
+
 
     }
 

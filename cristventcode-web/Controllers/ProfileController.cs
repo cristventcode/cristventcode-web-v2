@@ -35,7 +35,7 @@ namespace cristventcode_web.Controllers
             try
             {
                 // TODO: Add insert logic here
-                _myProfile.CreateBio(newProfile);
+                _myProfile.createProfile(newProfile);
                 return View();
             }
             catch
