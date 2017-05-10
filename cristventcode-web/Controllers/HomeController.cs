@@ -9,10 +9,10 @@ namespace cristventcode_web.Controllers
 {
     public class HomeController : Controller
     {
-        private static BioContentRepo _myBio = new BioContentRepo();
+        private static ContentRepo _myProfile = new ContentRepo();
         public ActionResult Index()
         {
-            return View(_myBio.getBio());
+            return View(_myProfile.getProfile());
         }
 
         public ActionResult About()

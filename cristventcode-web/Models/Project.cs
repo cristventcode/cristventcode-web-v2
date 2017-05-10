@@ -8,10 +8,12 @@ namespace cristventcode_web.Models
     public class Project
     {
         public int ProjectId { get; set; }
-        public int BioId { get; set; }
+        public int ProfileId { get; set; }
         public string Title { get; set; }
-        public string Description { get; set; }
-        public List<Link> Links { get; set; }
-        public List<string> ToolsUsed { get; set; }
+        public string ShortDescription { get; set; }
+        public string FullDescription { get; set; }
+        public string GithubUrl { get; set; }
+        public string InternalUrl { get; set; }
+        public string ToolsUsed { get; set; }
     }
 }

@@ -58,11 +58,11 @@
     border: 4px solid white;
 }
 
-.personal-image-small{
+.personal-image-small {
     height: 100px;
 }
 
-.section-hero-small{
+.section-hero-small {
     height: 280px;
 }
 
@@ -96,18 +96,18 @@
     font-family: 'Lato', sans-serif;
     color: #6b7c93;
     font-size: 1.6rem;
-
 }
+
     .card-details h3, h4 {
         margin: 0px;
         color: black;
     }
 
-.card-details li {
-    margin-bottom: 5px;
-}
+    .card-details li {
+        margin-bottom: 5px;
+    }
 
-.list-group-item-heading{
+.list-group-item-heading {
     background-color: #29AF6A;
     color: white;
 }
@@ -116,6 +116,26 @@
     background-color: transparent;
     padding-top: 0px;
 }
+
+#edit-page-image {
+    height: 200px;
+}
+
+.edit-page-tabs {
+    background-color: white;
+}
+
+.edit-page-tabs h4{
+    padding: 15px;
+}
+
+.edit-page-tabs .nav-tabs{
+    margin-left: 15px;
+}
+
+    .edit-page-tabs .tab-content {
+        padding: 0px 15px 15px 15px;
+    }
 
 @media(min-width: 768px) {
     .hero-text h1 {
@@ -126,28 +146,26 @@
         background-color: transparent;
     }
 
-    .navbar{
+    .navbar {
         border-radius: 0px;
     }
 
-    .card-holder{
+    .card-holder {
         padding-right: 0px;
     }
 
-    .body-content, .navbar, .navbar-custom{
+    .body-content, .navbar, .navbar-custom {
         width: 100%;
     }
-
 }
 
-@media(min-width: 1440px){
+@media(min-width: 1440px) {
     .body-content, .navbar, .navbar-custom {
         width: 1440px;
         margin: 0px auto;
     }
 
-    .navbar-custom{
+    .navbar-custom {
         padding: 0px 45px;
     }
-
 }

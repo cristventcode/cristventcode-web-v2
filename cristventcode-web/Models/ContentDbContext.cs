@@ -6,10 +6,9 @@ using System.Data.Entity;
 
 namespace cristventcode_web.Models
 {
-    public class BioContentDbContext : DbContext
+    public class ContentDbContext : DbContext
     {
-        public DbSet<Bio> BioTable { get; set; }
-        public DbSet<Link> LinksTable { get; set; }
+        public DbSet<Profile> ProfileTable { get; set; }
         public DbSet<Project> ProjectsTable { get; set; }
     }
 }

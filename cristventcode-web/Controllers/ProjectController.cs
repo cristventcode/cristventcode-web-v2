@@ -3,40 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using cristventcode_web.Models;
 
 namespace cristventcode_web.Controllers
 {
-    public class ContentController : Controller
+    public class ProjectController : Controller
     {
-        private static BioContentRepo _myBio = new BioContentRepo();
-        // GET: Content
+        // GET: Project
         public ActionResult Index()
         {
-            return View(_myBio.getBio());
+            return View();
         }
 
-        // GET: Content/Details/5
-        public ActionResult Details()
+        // GET: Project/Details/5
+        public ActionResult Details(int id)
         {
-            return View(_myBio.getBio());
+            return View();
         }
 
-        // GET: Content/Create
+        // GET: Project/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Content/Create
+        // POST: Project/Create
         [HttpPost]
-        public ActionResult Create(Bio newBio, FormCollection collection)
+        public ActionResult Create(FormCollection collection)
         {
             try
             {
                 // TODO: Add insert logic here
-                _myBio.CreateBio(newBio);
-                return View();
+
+                return RedirectToAction("Index");
             }
             catch
             {
@@ -44,13 +42,13 @@ namespace cristventcode_web.Controllers
             }
         }
 
-        // GET: Content/Edit/5
+        // GET: Project/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Content/Edit/5
+        // POST: Project/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -66,13 +64,13 @@ namespace cristventcode_web.Controllers
             }
         }
 
-        // GET: Content/Delete/5
+        // GET: Project/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Content/Delete/5
+        // POST: Project/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
