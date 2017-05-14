@@ -278,14 +278,20 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Content\Create.cshtml" />
-    <Content Include="Views\Content\Details.cshtml" />
-    <Content Include="Views\Content\Index.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Project\Index.cshtml" />
+    <Content Include="Views\Project\Details.cshtml" />
+    <Content Include="Views\Project\Create.cshtml" />
+    <Content Include="Views\Project\Edit.cshtml" />
+    <Content Include="Views\Project\Delete.cshtml" />
+    <Content Include="Views\Writing\Index.cshtml" />
+    <Content Include="Views\Writing\Details.cshtml" />
+    <Content Include="Views\Writing\Create.cshtml" />
+    <Content Include="Views\Writing\Edit.cshtml" />
+    <Content Include="Views\Writing\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Project\" />
-    <Folder Include="Views\Writing\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
