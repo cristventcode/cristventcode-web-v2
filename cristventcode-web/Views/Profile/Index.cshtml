@@ -42,11 +42,13 @@
                 <div class="tab-content">
                     <div id="menu1" class="tab-pane fade in active">
                         <ul class="list-group">
-                            <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                            <li class="list-group-item">Morbi eget libero quis metus consectetur semper.</li>
-                            <li class="list-group-item">Suspendisse ullamcorper massa eget eleifend iaculis.</li>
+                            @foreach (var project in Model.Projects)
+                            {
+                                <li class="list-group-item">@project.Title</li>
+                            }
+                           
                         </ul>
-                        <button class="btn btn-sm btn-default">Manage Projects</button>
+                        <a href="~/Project/Index" class="btn btn-sm btn-default">Manage Projects</a>
                         <br />
                     </div>
                     <div id="menu2" class="tab-pane fade">

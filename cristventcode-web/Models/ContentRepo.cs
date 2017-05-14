@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 
 namespace cristventcode_web.Models
 {
@@ -15,7 +16,9 @@ namespace cristventcode_web.Models
         {
             using (var db = new ContentDbContext())
             {
-                return db.ProfileTable.Find(1);
+                var profile = db.ProfileTable.Find(1);
+                db.Entry(profile).Collection(item => item.Projects).Load();
+                return profile;
             }
         }
 
@@ -64,8 +67,9 @@ namespace cristventcode_web.Models
         // Methods for managing Projects
         public void createProject(Project newProject)
         {
+            newProject.ProfileId = 1;
             using (var db = new ContentDbContext())
-            {
+            {       
                 db.ProjectsTable.Add(newProject);
                 db.SaveChanges();
             }
@@ -89,8 +93,17 @@ namespace cristventcode_web.Models
                 return db.ProjectsTable.Find(id);
             }
         }
-        // End of Projects
 
+        public void editProject(Project editedProject)
+        {
+            using(var db = new ContentDbContext())
+            {
+                db.ProjectsTable.Attach(editedProject);
+                db.Entry(editedProject).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+        }
+        // End of Projects
 
     }
 

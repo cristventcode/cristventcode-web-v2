@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using cristventcode_web.Models;
 
 namespace cristventcode_web.Controllers
 {
     public class ProjectController : Controller
     {
+        public static ContentRepo _myProjects = new ContentRepo();
         // GET: Project
         public ActionResult Index()
         {
-            return View();
+            return View(_myProjects.getProjectAll());
         }
 
         // GET: Project/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(_myProjects.getProjectById(id));
         }
 
         // GET: Project/Create
@@ -28,12 +30,12 @@ namespace cristventcode_web.Controllers
 
         // POST: Project/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Project newProject, FormCollection collection)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                _myProjects.createProject(newProject);
                 return RedirectToAction("Index");
             }
             catch
@@ -45,17 +47,17 @@ namespace cristventcode_web.Controllers
         // GET: Project/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(_myProjects.getProjectById(id));
         }
 
         // POST: Project/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Project editedProject, FormCollection collection)
         {
             try
             {
                 // TODO: Add update logic here
-
+                _myProjects.editProject(editedProject);
                 return RedirectToAction("Index");
             }
             catch
@@ -67,7 +69,7 @@ namespace cristventcode_web.Controllers
         // GET: Project/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            return View(_myProjects.getProjectById(id));
         }
 
         // POST: Project/Delete/5

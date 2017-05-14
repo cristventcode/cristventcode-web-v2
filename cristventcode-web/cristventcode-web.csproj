@@ -197,6 +197,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IProjectMethods.cs" />
+    <Compile Include="Models\IWritingMethods.cs" />
     <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\ContentDbContext.cs" />
     <Compile Include="Models\ContentRepo.cs" />
