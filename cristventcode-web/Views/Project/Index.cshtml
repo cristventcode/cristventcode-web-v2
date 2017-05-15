@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Projects</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -16,6 +16,7 @@
     {
         <li class="list-group-item">
             <strong>@project.Title</strong><span style="float:right">
+                @Html.ActionLink("Skills", "Skills", new { id = project.ProjectId }) |
                 @Html.ActionLink("Edit", "Edit", new { id = project.ProjectId }) |
                 @Html.ActionLink("Details", "Details", new { id = project.ProjectId }) |
                 @Html.ActionLink("Delete", "Delete", new { id = project.ProjectId })

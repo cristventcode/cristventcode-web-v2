@@ -101,7 +101,9 @@ namespace cristventcode_web.Models
         {
             using (var db = new ContentDbContext())
             {
-                return db.ProjectsTable.Find(id);
+                var project = db.ProjectsTable.Find(id);
+                db.Entry(project).Collection(item => item.SkillList).Load();
+                return project;
             }
         }
 
@@ -153,6 +155,16 @@ namespace cristventcode_web.Models
             {
                 db.SkillsTable.Attach(editedSkill);
                 db.Entry(editedSkill).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+        }
+
+        public void deleteSkill(int skillId)
+        {
+            using (var db = new ContentDbContext())
+            {
+                var skill = db.SkillsTable.Find(skillId);
+                db.SkillsTable.Remove(skill);
                 db.SaveChanges();
             }
         }

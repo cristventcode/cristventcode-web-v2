@@ -22,6 +22,30 @@ namespace cristventcode_web.Controllers
             return View(_myProjects.getProjectById(id));
         }
 
+        public ActionResult Skills(int id)
+        {
+            Project targetProject = _myProjects.getProjectById(id);
+            ViewBag.ProjectId = targetProject.ProjectId;
+            ViewBag.ProjectTitle = targetProject.Title;
+            return View(targetProject.SkillList);
+        }
+
+        [HttpPost]
+        public ActionResult Skills(Skill newSkill)
+        {
+            newSkill.ProfileId = 1;
+            newSkill.Active = true;
+            _myProjects.createSkill(newSkill);
+            return RedirectToAction("Skills", new { id = newSkill.ProjectId });
+        }
+
+        public ActionResult DeleteSkill(int id)
+        {
+            Skill targetSkill = _myProjects.getSkillById(id);
+            _myProjects.deleteSkill(id);
+            return RedirectToAction("Skills", new { id = targetSkill.ProjectId });
+        }
+
         // GET: Project/Create
         public ActionResult Create()
         {

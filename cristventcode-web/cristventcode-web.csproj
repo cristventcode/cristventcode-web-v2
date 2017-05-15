@@ -315,6 +315,7 @@
     <Content Include="Views\Writing\Delete.cshtml" />
     <Content Include="Views\Profile\Create.cshtml" />
     <Content Include="Views\Home\Writings.cshtml" />
+    <Content Include="Views\Project\Skills.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
