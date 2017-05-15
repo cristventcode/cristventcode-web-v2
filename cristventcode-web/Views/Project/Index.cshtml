@@ -9,61 +9,77 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ProfileId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShortDescription)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FullDescription)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GithubUrl)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.InternalUrl)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ToolsUsed)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProfileId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShortDescription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FullDescription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GithubUrl)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.InternalUrl)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ToolsUsed)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ProjectId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ProjectId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ProjectId })
-        </td>
-    </tr>
-}
 
-</table>
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfileId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShortDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GithubUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InternalUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToolsUsed)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfileId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GithubUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InternalUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToolsUsed)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ProjectId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ProjectId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ProjectId })
+            </td>
+        </tr>
+    }
+
+    </table>*@
+
+
+<ul class="list-group">
+    @foreach (var project in Model)
+    {
+        <li class="list-group-item">
+            <strong>@project.Title</strong><span style="float:right">
+                @Html.ActionLink("Edit", "Edit", new { id = project.ProjectId }) |
+                @Html.ActionLink("Details", "Details", new { id = project.ProjectId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = project.ProjectId })
+            </span>
+        </li>
+    }
+</ul>

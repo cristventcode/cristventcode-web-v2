@@ -35,6 +35,7 @@ namespace cristventcode_web.Controllers
             try
             {
                 // TODO: Add insert logic here
+                newProject.Active = true;
                 _myProjects.createProject(newProject);
                 return RedirectToAction("Index");
             }
@@ -57,6 +58,7 @@ namespace cristventcode_web.Controllers
             try
             {
                 // TODO: Add update logic here
+
                 _myProjects.editProject(editedProject);
                 return RedirectToAction("Index");
             }

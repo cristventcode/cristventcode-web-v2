@@ -29,7 +29,7 @@
     background-color: #29AF6A;
     color: white;
     /*position: absolute;*/
-    padding-top: 50px;
+    padding-top: 25px;
     top: 0;
     left: 0;
     right: 0;
@@ -63,7 +63,7 @@
 }
 
 .section-hero-small {
-    height: 280px;
+    height: 180px;
 }
 
 .navbar-toggle {
