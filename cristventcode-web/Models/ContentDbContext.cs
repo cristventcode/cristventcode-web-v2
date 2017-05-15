@@ -11,6 +11,7 @@ namespace cristventcode_web.Models
         public DbSet<Profile> ProfileTable { get; set; }
         public DbSet<Project> ProjectsTable { get; set; }
         public DbSet<Writing> WritingsTable { get; set; }
+        public DbSet<Skill> SkillsTable { get; set; }
 
     }
 }

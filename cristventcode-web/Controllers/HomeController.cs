@@ -18,7 +18,6 @@ namespace cristventcode_web.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
@@ -34,5 +33,10 @@ namespace cristventcode_web.Controllers
 
         //    return View();
         //}
+
+        public ActionResult Writings()
+        {
+            return View(_myProfile.getWritingAll());
+        }
     }
 }

@@ -14,5 +14,6 @@ namespace cristventcode_web.Models
         public DateTime LastEdit { get; set; }
         public string ExternalUrl { get; set; }
         public string Content { get; set; }
+        public bool Active { get; set; }
     }
 }

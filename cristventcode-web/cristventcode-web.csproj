@@ -204,6 +204,18 @@
     <Compile Include="Migrations\201705151327159_Added boolen to project class.Designer.cs">
       <DependentUpon>201705151327159_Added boolen to project class.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705151504368_UpdatedWritingClass.cs" />
+    <Compile Include="Migrations\201705151504368_UpdatedWritingClass.Designer.cs">
+      <DependentUpon>201705151504368_UpdatedWritingClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705151704265_AddedSkillTable.cs" />
+    <Compile Include="Migrations\201705151704265_AddedSkillTable.Designer.cs">
+      <DependentUpon>201705151704265_AddedSkillTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705151706348_ChangedSkillTable.cs" />
+    <Compile Include="Migrations\201705151706348_ChangedSkillTable.Designer.cs">
+      <DependentUpon>201705151706348_ChangedSkillTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IProjectMethods.cs" />
@@ -214,6 +226,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\Writing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -301,6 +314,7 @@
     <Content Include="Views\Writing\Edit.cshtml" />
     <Content Include="Views\Writing\Delete.cshtml" />
     <Content Include="Views\Profile\Create.cshtml" />
+    <Content Include="Views\Home\Writings.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -317,6 +331,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705151327159_Added boolen to project class.resx">
       <DependentUpon>201705151327159_Added boolen to project class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705151504368_UpdatedWritingClass.resx">
+      <DependentUpon>201705151504368_UpdatedWritingClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705151704265_AddedSkillTable.resx">
+      <DependentUpon>201705151704265_AddedSkillTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705151706348_ChangedSkillTable.resx">
+      <DependentUpon>201705151706348_ChangedSkillTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

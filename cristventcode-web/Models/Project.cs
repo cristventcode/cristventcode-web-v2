@@ -14,7 +14,7 @@ namespace cristventcode_web.Models
         public string FullDescription { get; set; }
         public string GithubUrl { get; set; }
         public string InternalUrl { get; set; }
-        public string ToolsUsed { get; set; }
+        public List<Skill> SkillList { get; set; }
         public bool Active { get; set; }
     }
 }

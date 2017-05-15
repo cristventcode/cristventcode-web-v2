@@ -9,55 +9,16 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ProfileId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PostDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastEdit)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ExternalUrl)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Content)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProfileId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PostDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastEdit)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ExternalUrl)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Content)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.WritingId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.WritingId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.WritingId })
-        </td>
-    </tr>
-}
-
-</table>
+<ul class="list-group">
+    @foreach (var writing in Model)
+    {
+        <li class="list-group-item">
+            <strong>@writing.Title</strong><span style="float:right">
+                @Html.ActionLink("Edit", "Edit", new { id = writing.WritingId }) |
+                @Html.ActionLink("Details", "Details", new { id = writing.WritingId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = writing.WritingId })
+            </span>
+        </li>
+    }
+</ul>

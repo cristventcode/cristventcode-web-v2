@@ -18,6 +18,7 @@ namespace cristventcode_web.Models
             {
                 var profile = db.ProfileTable.Find(1);
                 db.Entry(profile).Collection(item => item.Projects).Load();
+                db.Entry(profile).Collection(item => item.Writings).Load();
                 return profile;
             }
         }
@@ -38,6 +39,7 @@ namespace cristventcode_web.Models
         {
             using (var db = new ContentDbContext())
             {
+                newWriting.ProfileId = 1;
                 db.WritingsTable.Add(newWriting);
                 db.SaveChanges();
             }
@@ -61,8 +63,17 @@ namespace cristventcode_web.Models
                 return db.WritingsTable.Find(id);
             }
         }
-        // End of Writings
 
+        public void editWriting(Writing editedWriting)
+        {
+            using (var db = new ContentDbContext())
+            {
+                db.WritingsTable.Attach(editedWriting);
+                db.Entry(editedWriting).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+        }
+        // End of Writings
 
         // Methods for managing Projects
         public void createProject(Project newProject)
@@ -105,6 +116,47 @@ namespace cristventcode_web.Models
         }
         // End of Projects
 
+
+        // Methods for Managing Skills
+        public void createSkill(Skill newSkill)
+        {
+            newSkill.ProfileId = 1;
+            using (var db = new ContentDbContext())
+            {
+                db.SkillsTable.Add(newSkill);
+                db.SaveChanges();
+            }
+        }
+
+        public List<Skill> getSkillAll()
+        {
+            using (var db = new ContentDbContext())
+            {
+                var skillList = from item in db.SkillsTable
+                                  select item;
+
+                return skillList.ToList();
+            }
+        }
+
+        public Skill getSkillById(int id)
+        {
+            using (var db = new ContentDbContext())
+            {
+                return db.SkillsTable.Find(id);
+            }
+        }
+
+        public void editSkill(Skill editedSkill)
+        {
+            using (var db = new ContentDbContext())
+            {
+                db.SkillsTable.Attach(editedSkill);
+                db.Entry(editedSkill).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+        }
+        // End of Skills 
     }
 
 }

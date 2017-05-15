@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using cristventcode_web.Models;
 
 namespace cristventcode_web.Controllers
 {
     public class WritingController : Controller
     {
+        public static ContentRepo _myWritings = new ContentRepo();
         // GET: Writing
         public ActionResult Index()
         {
-            return View();
+            return View(_myWritings.getWritingAll());
         }
 
         // GET: Writing/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(_myWritings.getWritingById(id));
         }
 
         // GET: Writing/Create
@@ -28,15 +30,17 @@ namespace cristventcode_web.Controllers
 
         // POST: Writing/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Writing newWriting, FormCollection collection)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                newWriting.Active = true;
+                newWriting.LastEdit = newWriting.PostDate;
+                _myWritings.createWriting(newWriting);
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception ex)
             {
                 return View();
             }
@@ -45,17 +49,17 @@ namespace cristventcode_web.Controllers
         // GET: Writing/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(_myWritings.getWritingById(id));
         }
 
         // POST: Writing/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Writing editedWriting, FormCollection collection)
         {
             try
             {
                 // TODO: Add update logic here
-
+                _myWritings.editWriting(editedWriting);
                 return RedirectToAction("Index");
             }
             catch
