@@ -7,7 +7,8 @@
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/custom-theme.css")
     @Scripts.Render("~/bundles/modernizr")
-    <link href="https://fonts.googleapis.com/css?family=Lato|Work+Sans:800" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Work+Sans:800" rel="stylesheet">
+</head>
 <body>
     <header>
         <div class="navbar navbar-custom">
@@ -23,11 +24,13 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Skills", "About", "Home")</li>
+                        <li>@Html.ActionLink("Resume", "About", "Home")</li>
                         <li>@Html.ActionLink("Projects", "Contact", "Home")</li>
                         <li>@Html.ActionLink("Writings", "Writings", "Home")</li>
-                        <li>@Html.ActionLink("Profile", "Index", "Profile")</li>
-
+                        @if (System.Web.HttpContext.Current.User.Identity.Name == "cristventcode@gmail.com")
+                        {
+                            <li>@Html.ActionLink("Profile", "Index", "Profile")</li>
+                        }
                     </ul>
                     @Html.Partial("_LoginPartial")
                 </div>

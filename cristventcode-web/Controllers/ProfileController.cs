@@ -45,9 +45,9 @@ namespace cristventcode_web.Controllers
         }
 
         // GET: Content/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit()
         {
-            return View();
+            return View(_myProfile.getProfile());
         }
 
         // POST: Content/Edit/5

@@ -73,6 +73,16 @@ namespace cristventcode_web.Models
                 db.SaveChanges();
             }
         }
+
+        public void deleteWriting(int id)
+        {
+            using (var db = new ContentDbContext())
+            {
+                Writing writing = db.WritingsTable.Find();
+                db.WritingsTable.Remove(writing);
+                db.SaveChanges();
+            }
+        }
         // End of Writings
 
         // Methods for managing Projects
@@ -80,7 +90,7 @@ namespace cristventcode_web.Models
         {
             newProject.ProfileId = 1;
             using (var db = new ContentDbContext())
-            {       
+            {
                 db.ProjectsTable.Add(newProject);
                 db.SaveChanges();
             }
@@ -109,10 +119,20 @@ namespace cristventcode_web.Models
 
         public void editProject(Project editedProject)
         {
-            using(var db = new ContentDbContext())
+            using (var db = new ContentDbContext())
             {
                 db.ProjectsTable.Attach(editedProject);
                 db.Entry(editedProject).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+        }
+
+        public void deleteProject(int id)
+        {
+            using (var db = new ContentDbContext())
+            {
+                Project project = db.ProjectsTable.Find(id);
+                db.ProjectsTable.Remove(project);
                 db.SaveChanges();
             }
         }
@@ -135,7 +155,7 @@ namespace cristventcode_web.Models
             using (var db = new ContentDbContext())
             {
                 var skillList = from item in db.SkillsTable
-                                  select item;
+                                select item;
 
                 return skillList.ToList();
             }
