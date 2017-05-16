@@ -8,6 +8,11 @@ namespace cristventcode_web.Models
 {
     public class ContentDbContext : DbContext
     {
+        public ContentDbContext()
+            : base("name=DefaultConnection")
+        {
+        }
+
         public DbSet<Profile> ProfileTable { get; set; }
         public DbSet<Project> ProjectsTable { get; set; }
         public DbSet<Writing> WritingsTable { get; set; }
