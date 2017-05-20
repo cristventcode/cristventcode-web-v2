@@ -38,7 +38,7 @@
     background-color: #29AF6A;
     color: white;
     /*position: absolute;*/
-    padding-top: 25px;
+    padding-top: 50px;
     top: 0;
     left: 0;
     right: 0;
@@ -72,7 +72,7 @@
 }
 
 .section-hero-small {
-    height: 180px;
+    height: 170px;
 }
 
 .navbar-toggle {
@@ -94,9 +94,6 @@
     padding: 0px;
 }
 
-.card {
-}
-
 .card-details {
     padding: 15px 15px;
     margin-bottom: 15px;
@@ -104,11 +101,12 @@
     font-family: 'Lato', sans-serif;
     color: #6b7c93;
     font-size: 1.6rem;
+    min-height: 180px;
 }
 
     .card-details h3, h4 {
         margin: 0px;
-        color: black;
+        color: grey;
     }
 
     .card-details li {
@@ -145,6 +143,20 @@
         padding: 0px 15px 15px 15px;
     }
 
+footer{
+    text-align: center;
+}
+
+.skill-tag {
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    border: 1px solid #ddd;
+    background-color: #00A1DF;
+    color: white;
+}
+
 @media(min-width: 768px) {
     .hero-text h1 {
         font-size: 4rem;
@@ -169,8 +181,8 @@
 
 @media(min-width: 1440px) {
     .body-content, .navbar, .navbar-custom {
-        width: 1440px;
-        margin: 0px auto;
+        width: 100%;
+        /*margin: 0px auto;*/
     }
 
     .navbar-custom {

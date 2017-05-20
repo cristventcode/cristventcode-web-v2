@@ -12,7 +12,7 @@ namespace cristventcode_web.Controllers
         private static ContentRepo _myProfile = new ContentRepo();
         public ActionResult Index()
         {
-            return View(_myProfile.getProfile());
+            return View(/*_myProfile.getProfile()*/);
         }
 
         public ActionResult About()
@@ -24,7 +24,7 @@ namespace cristventcode_web.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-            return View(_myProfile.getProjectAll());
+            return View(/*_myProfile.getProjectAll()*/);
         }
 
         //public ActionResult Contact()
