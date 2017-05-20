@@ -1,5 +1,4 @@
-﻿@model IEnumerable<cristventcode_web.Models.Project>
-<div class="section-hero section-hero-small">
+﻿<div class="section-hero section-hero-small">
     <div class="hero">
         <div class="container">
             <div class="hero-text">
@@ -12,17 +11,50 @@
 
 <div class="col-xs-12 large-holder">
     <div class="col-md-9 card-holder">
-        @foreach (var project in Model)
-        {
-            <div class="col-xs-12 col-md-12 card">
-                <div class="card-details">
-                    <h3> @project.Title</h3>
-                    <hr />
-                    <p> @project.ShortDescription</p>
-                    <a class="btn btn-sm btn-default" href="@project.GithubUrl"> Github Repository</a>
-                </div>
+        <div class="col-xs-12 col-md-12 card">
+            <div class="card-details">
+                <h4> Music Search </h4>
+                <hr />
+                <h5>Using AJAX to make REST calls to iTunes API</h5>
+                <button class="btn btn-sm btn-default">Github</button>
             </div>
-        }
+            <div class="card-details">
+                <h4> Tictactoe Game </h4>
+                <hr />
+                <h5>A tictactoe game that has multiple game modes</h5>
+                <button class="btn btn-sm btn-default">Github</button>
+            </div>
+            <div class="card-details">
+                <h4> Soap Lye Calculator </h4>
+                <hr />
+                <h5>A tictactoe game that has multiple game modes</h5>
+                <button class="btn btn-sm btn-default">Github</button>
+            </div>
+            <div class="card-details">
+                <h4> Personal Work Assitant </h4>
+                <hr />
+                <h5>A tictactoe game that has multiple game modes</h5>
+                <button class="btn btn-sm btn-default">Github</button>
+            </div>
+            <div class="card-details">
+                <h4> Todo Check List </h4>
+                <hr />
+                <h5>A tictactoe game that has multiple game modes</h5>
+                <button class="btn btn-sm btn-default">Github</button>
+            </div>
+            <div class="card-details">
+                <h4> Winning Number Generator </h4>
+                <hr />
+                <h5>A tictactoe game that has multiple game modes</h5>
+                <button class="btn btn-sm btn-default">Github</button>
+            </div>
+            <div class="card-details">
+                <h4> C# Linked List </h4>
+                <hr />
+                <h5>A tictactoe game that has multiple game modes</h5>
+                <button class="btn btn-sm btn-default">Github</button>
+            </div>
+        </div>
     </div>
     <div class="col-xs-12 col-md-3 aside-holder">
         <div class="card-details">
