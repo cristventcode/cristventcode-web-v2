@@ -27,10 +27,10 @@
                         <li>@Html.ActionLink("Skills", "About", "Home")</li>
                         <li>@Html.ActionLink("Projects", "Contact", "Home")</li>
                         @*<li>@Html.ActionLink("Writings", "Writings", "Home")</li>*@
-                        @if (System.Web.HttpContext.Current.User.Identity.Name == "cristventcode@gmail.com")
+                        @*@if (System.Web.HttpContext.Current.User.Identity.Name == "cristventcode@gmail.com")
                         {
                             <li>@Html.ActionLink("Profile", "Index", "Profile")</li>
-                        }
+                        }*@
                     </ul>
                     @Html.Partial("_LoginPartial")
                 </div>

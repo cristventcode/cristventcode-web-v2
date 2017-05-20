@@ -3,8 +3,13 @@
     background-color: lightcoral;
 }
 
+.no-padding {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
 .navbar-custom {
-    background-color: #29AF6A;
+    background-color: #f2f2f8;
     z-index: 1030;
     position: absolute;
     top: 0;
@@ -14,10 +19,14 @@
 }
 
     .navbar-custom a {
-        color: white;
+        color: grey;
         font-family: 'Lato', sans-serif;
         font-size: 1.8rem;
     }
+
+.navbar-brand {
+    font-weight:900;
+}
 
 .container-fluid {
     padding-left: 0px;
@@ -82,6 +91,7 @@
 
 .body-content {
     background-color: #f2f2f8;
+    padding: 0px;
 }
 
 .card {
@@ -123,13 +133,13 @@
     background-color: white;
 }
 
-.edit-page-tabs h4{
-    padding: 15px;
-}
+    .edit-page-tabs h4 {
+        padding: 15px;
+    }
 
-.edit-page-tabs .nav-tabs{
-    margin-left: 15px;
-}
+    .edit-page-tabs .nav-tabs {
+        margin-left: 15px;
+    }
 
     .edit-page-tabs .tab-content {
         padding: 0px 15px 15px 15px;
