@@ -9,10 +9,9 @@ namespace cristventcode_web.Controllers
 {
     public class HomeController : Controller
     {
-        private static ContentRepo _myProfile = new ContentRepo();
         public ActionResult Index()
         {
-            return View(/*_myProfile.getProfile()*/);
+            return View();
         }
 
         public ActionResult Skills()
@@ -24,19 +23,8 @@ namespace cristventcode_web.Controllers
         public ActionResult Projects()
         {
             ViewBag.Message = "Your contact page.";
-            return View(/*_myProfile.getProjectAll()*/);
+            return View();
         }
 
-        //public ActionResult Contact()
-        //{
-        //    ViewBag.Message = "Your contact page.";
-
-        //    return View();
-        //}
-
-        public ActionResult Writings()
-        {
-            return View(_myProfile.getWritingAll());
-        }
     }
 }

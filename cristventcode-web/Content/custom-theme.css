@@ -1,7 +1,4 @@
 ﻿
-.navbar-collapse {
-}
-
 .no-padding {
     padding-right: 0px;
     padding-left: 0px;
@@ -36,7 +33,6 @@
     height: 350px;
     background-color: #29AF6A;
     color: white;
-    /*position: absolute;*/
     padding-top: 30px;
     top: 0;
     left: 0;

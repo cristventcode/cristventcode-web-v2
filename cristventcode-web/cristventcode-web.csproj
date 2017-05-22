@@ -188,46 +188,14 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\ProjectController.cs" />
-    <Compile Include="Controllers\WritingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705101633295_InitialCreate.cs" />
-    <Compile Include="Migrations\201705101633295_InitialCreate.Designer.cs">
-      <DependentUpon>201705101633295_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705151327159_Added boolen to project class.cs" />
-    <Compile Include="Migrations\201705151327159_Added boolen to project class.Designer.cs">
-      <DependentUpon>201705151327159_Added boolen to project class.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705151504368_UpdatedWritingClass.cs" />
-    <Compile Include="Migrations\201705151504368_UpdatedWritingClass.Designer.cs">
-      <DependentUpon>201705151504368_UpdatedWritingClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705151704265_AddedSkillTable.cs" />
-    <Compile Include="Migrations\201705151704265_AddedSkillTable.Designer.cs">
-      <DependentUpon>201705151704265_AddedSkillTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705151706348_ChangedSkillTable.cs" />
-    <Compile Include="Migrations\201705151706348_ChangedSkillTable.Designer.cs">
-      <DependentUpon>201705151706348_ChangedSkillTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IProjectMethods.cs" />
-    <Compile Include="Models\IWritingMethods.cs" />
-    <Compile Include="Models\Profile.cs" />
-    <Compile Include="Models\ContentDbContext.cs" />
-    <Compile Include="Models\ContentRepo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Project.cs" />
-    <Compile Include="Models\Skill.cs" />
-    <Compile Include="Models\Writing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -303,21 +271,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Profile\Index.cshtml" />
-    <Content Include="Views\Project\Index.cshtml" />
-    <Content Include="Views\Project\Details.cshtml" />
-    <Content Include="Views\Project\Create.cshtml" />
-    <Content Include="Views\Project\Edit.cshtml" />
-    <Content Include="Views\Project\Delete.cshtml" />
-    <Content Include="Views\Writing\Index.cshtml" />
-    <Content Include="Views\Writing\Details.cshtml" />
-    <Content Include="Views\Writing\Create.cshtml" />
-    <Content Include="Views\Writing\Edit.cshtml" />
-    <Content Include="Views\Writing\Delete.cshtml" />
-    <Content Include="Views\Profile\Create.cshtml" />
-    <Content Include="Views\Home\Writings.cshtml" />
-    <Content Include="Views\Project\Skills.cshtml" />
-    <Content Include="Views\Profile\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -327,23 +280,6 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705101633295_InitialCreate.resx">
-      <DependentUpon>201705101633295_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705151327159_Added boolen to project class.resx">
-      <DependentUpon>201705151327159_Added boolen to project class.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705151504368_UpdatedWritingClass.resx">
-      <DependentUpon>201705151504368_UpdatedWritingClass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705151704265_AddedSkillTable.resx">
-      <DependentUpon>201705151704265_AddedSkillTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705151706348_ChangedSkillTable.resx">
-      <DependentUpon>201705151706348_ChangedSkillTable.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
