@@ -8,7 +8,7 @@
 }
 
 .navbar-custom {
-    background-color: #f2f2f8;
+    background-color: white;
     z-index: 1030;
     position: absolute;
     top: 0;
@@ -72,7 +72,7 @@
 }
 
 .section-hero-small {
-    height: 170px;
+    height: 150px;
 }
 
 .navbar-toggle {
@@ -80,7 +80,7 @@
 }
 
     .navbar-toggle span {
-        background-color: steelblue;
+        background-color: #29AF6A;
     }
 
 
@@ -158,7 +158,7 @@ footer{
 }
 
 .link-tag {
-    margin: 0px 10px;
+    margin: 0px 25px;
     padding: 5px 10px;
 }
 

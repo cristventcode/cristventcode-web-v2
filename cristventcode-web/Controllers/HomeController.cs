@@ -15,13 +15,13 @@ namespace cristventcode_web.Controllers
             return View(/*_myProfile.getProfile()*/);
         }
 
-        public ActionResult About()
+        public ActionResult Skills()
         {
             ViewBag.Message = "Your application description page.";
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Projects()
         {
             ViewBag.Message = "Your contact page.";
             return View(/*_myProfile.getProjectAll()*/);
